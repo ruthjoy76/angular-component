@@ -1,0 +1,36 @@
+.counter-container {
+  max-width: 30%;
+  background-color: #d0d0d0;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  margin: 50px auto;
+}
+
+h2 {
+  color:#7E0EED;
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #181818 ;
+}
+
+button {
+  font-size: 1em;
+  padding: .75rem 1.2rem;
+  margin: 0 .75rem;
+  background-color: #7E0EED;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #B2E2FF;
+  cursor: not-allowed;
+  color: #181818;
+}

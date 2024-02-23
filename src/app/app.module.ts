@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CounterComponent } from './counter/counter.component';
+import { CounterService } from './counter/counter.service'; // Import the CounterService
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CounterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    CounterService, // Provide the CounterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
