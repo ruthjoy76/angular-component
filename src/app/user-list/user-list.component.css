@@ -1,0 +1,37 @@
+.user-list {
+  padding: 20px;
+  background-color: #B2E2FF;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+button {
+  margin: 0 10px;
+  background-color: #7E0EED;
+  color: #ffffff;
+  padding: .55rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #181818;
+  padding: 8px;
+  text-align: center;
+}
+
+img {
+  max-width: 50px;
+  max-height: 50px;
+}
