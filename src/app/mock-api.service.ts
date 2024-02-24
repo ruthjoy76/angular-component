@@ -8,12 +8,12 @@ import { User } from './user.model';
   providedIn: 'root'
 })
 export class MockApiService {
-  apiUrl = 'https://dummyjson.com/users';
+  private apiUrl = 'https://dummyjson.com';
 
   constructor(private http: HttpClient) {}
 
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`${this.apiUrl}`)
+    return this.http.get<User[]>(`${this.apiUrl}/users`)
       .pipe(
         catchError(error => {
           console.error('Error fetching users:', error);

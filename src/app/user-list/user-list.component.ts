@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MockApiService } from '../mock-api.service';
 import { User } from '../user.model';
+import { NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-user-list',
@@ -13,7 +14,7 @@ export class UserListComponent implements OnInit {
   showAll: boolean = true;
   errorMessage: string = '';
 
-  constructor(private mockApiService: MockApiService) {}
+  constructor(private mockApiService: MockApiService, private ngZone: NgZone) {}
 
   ngOnInit() {
     this.fetchUsers();
@@ -21,11 +22,18 @@ export class UserListComponent implements OnInit {
 
   fetchUsers() {
     this.mockApiService.getUsers().subscribe(
-      (data: User[]) => {
-        console.log('Received data:', data);
-        this.users = data;
-        this.filteredUsers = this.users;
-        this.errorMessage = ''; // Clear any previous error message
+      (data: any) => {
+        if (data && data.users && Array.isArray(data.users)) {
+          console.log('Received data:', data.users);
+          this.ngZone.run(() => {
+            this.users = data.users;
+            this.filteredUsers = this.users;
+            this.errorMessage = ''; 
+          });
+        } else {
+          console.error('Invalid data structure. Expected array in "users" property:', data);
+          this.errorMessage = 'Error fetching users. Please try again later.';
+        }
       },
       error => {
         console.error('Error fetching users:', error);
@@ -33,13 +41,21 @@ export class UserListComponent implements OnInit {
       }
     );
   }
+  
 
   filterUsers(gender: string) {
+    console.log('Filtering users with gender:', gender);
+    console.log('All users:', this.users);
+  
     if (gender === 'all') {
       this.filteredUsers = this.users;
     } else {
-      this.filteredUsers = this.users.filter(user => user.Gender.toLowerCase() === gender);
+      this.filteredUsers = this.users.filter(user => {
+        const userGender = user?.gender?.toLowerCase(); 
+        return userGender === gender.toLowerCase();
+      });
     }
     this.showAll = gender === 'all';
   }
+  
 }

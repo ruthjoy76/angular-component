@@ -1,12 +1,12 @@
 .user-list {
-  padding: 20px;
-  background-color: #B2E2FF;
+  padding: 2rem;
+  background-color: #D0D0D0;
   border-radius: 5px;
-  margin: 20px;
+  margin: 2rem;
 }
 
 .error-message {
-  color: red;
+  color: #7E0EED;
   margin-bottom: 10px;
 }
 
@@ -15,6 +15,7 @@ button {
   background-color: #7E0EED;
   color: #ffffff;
   padding: .55rem;
+  border-color: #7E0EED;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -23,12 +24,16 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  color: #7E0EED;
+  border: 2px solid 
 }
 
+
 th, td {
-  border: 1px solid #181818;
+  border: 1px solid #7E0EED;
   padding: 8px;
   text-align: center;
+  color: #181818;
 }
 
 img {

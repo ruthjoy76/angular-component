@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter.component';
-import { CounterService } from './counter/counter.service';
 import { UserListComponent } from './user-list/user-list.component';
 import { HeaderComponent } from './header/header.component';
 
@@ -20,9 +19,7 @@ import { HeaderComponent } from './header/header.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [
-   
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
