@@ -1,21 +1,21 @@
 .user-list {
   padding: 2rem;
-  background-color: #D0D0D0;
+  background-color: #f1f1f1;
   border-radius: 5px;
   margin: 2rem;
 }
 
 .error-message {
-  color: #7E0EED;
+  color: #800ff0;
   margin-bottom: 10px;
 }
 
 button {
   margin: 0 10px;
-  background-color: #7E0EED;
-  color: #ffffff;
+  background-color: #800ff0;
+  color: #f1f1f1;
   padding: .55rem;
-  border-color: #7E0EED;
+  border-color: #800ff0;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -24,13 +24,13 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
-  color: #7E0EED;
+  color: #800ff0;
   border: 2px solid 
 }
 
 
 th, td {
-  border: 1px solid #7E0EED;
+  border: 1px solid #800ff0;
   padding: 8px;
   text-align: center;
   color: #181818;

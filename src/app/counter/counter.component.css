@@ -1,6 +1,6 @@
 .counter-container {
   max-width: 30%;
-  background-color: #d0d0d0;
+  background-color: #f1f1f1;
   border-radius: 20px;
   padding: 2rem;
   text-align: center;
@@ -8,7 +8,7 @@
 }
 
 h2 {
-  color:#7E0EED;
+  color:#800ff0;
   font-size: 2em;
 }
 
@@ -22,7 +22,7 @@ button {
   font-size: 1em;
   padding: .75rem 1.2rem;
   margin: 0 .75rem;
-  background-color: #7E0EED;
+  background-color: #800ff0;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -30,7 +30,7 @@ button {
 }
 
 button:disabled {
-  background-color: #B2E2FF;
+  background-color: #4cacef;
   cursor: not-allowed;
   color: #181818;
 }
